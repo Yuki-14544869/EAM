@@ -1,0 +1,31 @@
+/*登录页新用户关联手机号*/
+select{outline:none;}
+ul{list-style-type:none;margin:0;padding:0;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {zoom: 1;}
+.pop_relation{width:340px;height:480px;z-index:10000000;position:relative;background-color:#fff;border-radius:5px;margin:50px auto;}
+.pop_relation .ico_close{background:url(../css/images/notice_close.png) no-repeat;width:32px;height:32px;position:absolute;top:-10px;right:-10px;cursor:pointer;}
+.pop_relation .notice_head{width:289px;height:37px;margin:0 auto;margin-top:35px;}
+.pop_relation .notice_layer{margin:25px 37px 0 40px;font-size:16px;font-family:"黑体";}
+.notice_layer .notice_edit li{margin-bottom:20px;}
+.notice_layer .notice_edit input{
+	width:240px;padding:0 10px;height:28px;line-height:28px;border-radius:4px;border:1px solid #ccc;color:#808080;font-size:14px;font-family:"黑体";
+}
+.notice_layer .notice_edit .btn_code{width:120px;height:30px;line-height:32px;color:#fff;background-color:#ffa733;float:right;}
+.notice_layer .notice_edit .btn_code2{width:120px;height:30px;line-height:32px;color:#ffe6cc;background-color:#e3ae76;float:right;font-size:12px;}
+.notice_layer .notice_edit .input_code{width:100px;float:left;}
+.notice_layer .notice_edit .input_code_valid{width:100px;float:left;}
+.notice_layer .notice_edit .input_pass{width:150px;float:left;}
+.notice_layer .notice_edit .city_list{width:70px;float:right;border:1px solid #ccc;border-radius:4px;background:url(../images/ico_triangle.png) no-repeat 53px 12px;}
+.notice_layer .notice_edit .city_list select{
+	width:70px;height:28px;line-height:28px;border:none;font-size:14px;font-family:"黑体";color:#808080;
+	background: transparent;
+	-webkit-appearance: none; /*for chrome*/
+}
+.notice_layer .notice_edit a{display:inline-block;text-decoration:none;border-radius:4px;text-align:center;}
+.notice_layer .notice_edit a:hover{text-decoration:none;}
+.notice_layer .notice_btn{width:260px;height:40px;line-height:40px;border:1px solid #fa5914;color:#fa5914;font-size:18px;}
+.pop_relation .notice_text{
+	padding:0 37px 0 40px;color:#8b572a;line-height: 26px;font-size:12px;font-family:"黑体";
+}
+.pop_relation .notice_text p{font-size:12px;color:#000;}

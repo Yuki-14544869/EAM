@@ -1,0 +1,65 @@
+/*ͷ������*/
+/* CSS Document */
+/*
+	author:�����;
+	time��2015-9-7
+*/
+body strong{font-weight:700;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,textarea,p,th,td,a{margin:0;padding:0;word-wrap:break-word;}
+table{border-collapse:collapse;}
+p{word-wrap:break-word} /*���ݸ�����������ּ�Ӣ�Ļ���*/
+article,aside,footer,header,section,nav,menu,figure,figcaption hgroup,details{display:block;}
+fieldset,img{border:0;}
+ul,li{list-style:none;}
+legend{display:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}  
+body{color:#4d4d4d;font-family:Microsoft YaHei,Arial, Helvetica, sans-serif;font-size:12px;}
+em,i{font-style:normal;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1;}
+a{outline:none;}
+a:link,a:visited{color:#4d4d4d;text-decoration:none;}
+a:hover{color:#0c85fe;text-decoration:underline;}
+
+input,textarea,select{resize:none;outline:none;font-family:"΢���ź�";}
+input::-ms-clear{display:none;}
+input::-ms-reveal{display:none;}
+/*���ظ�ѡ����ʽ*/
+/*
+input[type=checkbox]{visibility:hidden;width:0;height:0;}
+*/
+
+/*input��ȡ����*/
+.input_focus{color:#4a4a4a;}
+
+
+/*----------------����-------------------*/
+#header{background-color:#fff;height:46px;width:100%;border-top:4px solid #4b93db;position:fixed;z-index:1000000;}
+#header .top{width:1200px;margin:0 auto;border-bottom:2px solid #b3d9ff;}
+#header .top .logo{float:left;margin-top:9px;}
+#header .top .nav{float:left;margin:0 0 0 60px;text-align:center;}
+#header .top .nav a{width:80px;height:46px;line-height:46px;color:#0c85fe;font-size:14px;display:inline-block;letter-spacing:1px;float:left;}
+#header .top .nav a:hover,#header .top .nav .checked{background-color:#b3d9ff;color:#053361;text-decoration:none;}
+#header .top .top_teacher{float:right;line-height:46px;}
+#header .top .top_teacher a,#header .top .top_teacher a:hover{color:#0c85fe;text-decoration:none;}
+#header .top .top_teacher .email{float:left;margin-right:20px;}
+#header .top .top_teacher span{margin:0 8px;color:#727171;float:left;}
+#header .top .top_teacher .teacher_exit{float:left;margin:0 20px 0 28px;}
+#header .top .top_teacher .teacher_man{float:left;position:relative;}
+#header .top .top_teacher .teacher_tip em{background:url(images/tea_arrow1.png) no-repeat;width:12px;height:7px;display:inline-block;margin-left:5px;}
+#header .top .top_teacher .teacher_man .teacher_show{position:absolute;top:35px;left:0;background-color:#fff;border:1px solid #e8e8e8;display:none;z-index: 100;}
+#header .top .top_teacher .teacher_man .teacher_show a{width:120px;height:34px;line-height:34px;text-align:center;display:block;font-size:14px;}
+#header .top .top_teacher .teacher_man .teacher_show a:hover{background-color:#0c85fe;color:#fff;}
+#header .top .top_teacher .teacher_man:hover .teacher_show{display:block;}
+
+#header .top .top_teacher .schedule_main{float:left;position:relative;height:100%;z-index:1000000;width:40px;}
+#header .top .top_teacher .schedule_main .schedule_ico{background:url(../../images/ico_man1.png) no-repeat;width:14px;height:15px;position: absolute;top: 15px;right: 60px;}
+.schedule_mess li{height:24px;line-height:24px;}
+#header .top .top_teacher .schedule_mess{position:absolute;right:-10px;top:34px;background-color:#fff;width:163px;display:none;padding:5px 10px 5px 15px;border:1px solid #ef6d55;
+border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;background-color:#fff7f5;box-shadow:0 2px 5px #999;-webkit-box-shadow:0 2px 5px #999;-moz-box-shadow:0 2px 5px #999;}
+#header .top .top_teacher .schedule_mess a{color:#333;}
+#header .top .top_teacher .schedule_mess a:hover{color:#333;text-decoration:underline;}
+#header .top .top_teacher .schedule_mess .back_message{margin:0 7px;font-style:normal;}
+#header .top .top_teacher .schedule_arr{background:url(../../images/schedule_arr.png) no-repeat;width:14px;height:7px;position:absolute;right:-2px;top:27px;}
+#header .top .top_teacher .schedule_close{background:url(../../images/schedule_close.png) no-repeat;width:20px;height:20px;position:absolute;right:-95px;top:27px;z-index:10000;
+cursor:pointer;}

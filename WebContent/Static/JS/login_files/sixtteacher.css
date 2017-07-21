@@ -1,0 +1,68 @@
+﻿@CHARSET "UTF-8";
+/**
+公共样式css
+*/
+/*上传讲义*/
+.G_upBox{ padding:20px 20px; height:350px;}
+.G_inpText {
+    border: 1px solid #D7D7D7;
+    height: 20px;
+    padding: 2px 3px;
+    width: 265px;
+}
+.G_wid460{ width:460px;}
+#menu div.submenu div.childmenu{ 
+    position:absolute; width:auto; height:auto; 
+	margin-top: -25px; 
+	margin-left:135px;
+	background:#fffdee; border:1px solid #d8d8d8; padding:10px; display:inline;
+}
+.lengthtext{word-wrap: break-word;word-break:break-all;}
+
+.probar {
+	height: 14px;
+	width: 462px;
+}
+
+.probar .left {
+	float: left;
+	height: 14px;
+	width: 1px;
+	background: url(images/probar_left.jpg) no-repeat left center;
+}
+
+.probar .center {
+	float: left;
+	width: 460px;
+	background: url(images/probar_center.jpg) repeat-x center center;
+}
+
+.probar .center span {
+	float: left;
+	height: 14px;
+}
+
+.probar .center span.cl_ok {
+	background: url(images/probar_blue.jpg) no-repeat center center;
+}
+
+.probar .center span.cl_no {
+	background: url(images/probar_gray.jpg) no-repeat center center;
+}
+
+.probar .right {
+	float: left;
+	height: 14px;
+	width: 1px;
+	background: url(images/probar_right.jpg) no-repeat right center;
+}
+/*lyy课程类别提示*/
+.topImag{border: 1px solid #D7D7D7;background:#666; position:relative; margin-top: -102px;margin-left:-2px;  width:145px; height:90px; overflow:hidden; padding:5px;}
+.topImag h1{color:#fff; line-height:26px; font-size:14px; margin-top:20px;margin-left:5px;}
+.topImag p{color:#fff; line-height:26px; font-size:12px;margin-left:5px;}
+.Managementpage li{ width:122px; float:left; padding:20px 10px 0px 20px; height:134px;}
+.T_courseBox{width:1000px;}
+.T_courseBox dl{ float:left; width:162px; height:143px; margin:0 37px 38px 0px; background:#FFF;}
+.G_plbox310{ width:auto; position:relative;}
+.G_plArea2{ margin-left:20px; border:1px solid #d2e3ef; background:#e8f5fd; padding:10px;}
+.G_arow2{ position:absolute; left:13px; top:15px; background-position:0 -610px; width:9px; height:15px; overflow:hidden;}

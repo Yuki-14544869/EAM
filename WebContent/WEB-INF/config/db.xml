@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>db infor</comment>
+<entry key="ip">10.25.251.210</entry>
+<entry key="port">1521</entry>
+<entry key="dbName">orcl</entry>
+<entry key="userName">eam</entry>
+<entry key="password">tiger</entry>
+</properties>

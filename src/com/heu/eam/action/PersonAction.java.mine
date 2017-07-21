@@ -1,0 +1,190 @@
+package com.heu.eam.action;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.heu.eam.dao.pojo.Person;
+import com.heu.eam.exception.DaoException;
+import com.heu.eam.exception.ServiceBusinessException;
+import com.heu.eam.service.PersonService;
+import com.heu.eam.service.impl.PersonServiceImpl;
+
+
+/**
+ * Servlet implementation class PersonAction
+ */
+@WebServlet("/person")
+public class PersonAction extends BaseAction {
+	private static final long serialVersionUID = 1L;
+	private PersonService personService = new PersonServiceImpl();
+
+	
+	public  String addPerson(HttpServletRequest request,HttpServletResponse response) throws DaoException {
+		
+		String id = request.getParameter("id");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String sex = request.getParameter("sex");
+		String tel = request.getParameter("tel");
+		String realname = request.getParameter("realname");
+		String nat = request.getParameter("nat");
+		String borndate = request.getParameter("borndate");
+		String hiredate = request.getParameter("hiredate");
+		String deptid = request.getParameter("deptid");
+		String cardid = request.getParameter("cardid");
+		String address = request.getParameter("address");
+		String natpl = request.getParameter("natpl");
+		String mail = request.getParameter("mail");
+		String pos = request.getParameter("pos");
+		String state = request.getParameter("state");
+		String del = request.getParameter("del");
+		String createId = request.getParameter("createId");
+		String createtime = request.getParameter("createtime");
+		String updateId = request.getParameter("updateId");
+		String updatetime = request.getParameter("updatetime");
+		String version = request.getParameter("version");
+        
+		Person p = new Person();
+		p.setCreateId(1);
+		p.setUsername (username);
+		p.setSex(sex); 
+		p.setTel(tel);
+		p.setRealname(realname);
+		p.setNat(natpl);
+		p.setBorndate(borndate);
+		p.setHiredate(hiredate);
+		p.setDeptid(Integer.parseInt(deptid));
+		p.setCardid(cardid);
+		p.setAddress(address); 
+		p.setNatpl(natpl);
+		p.setMail(mail); 
+		p.setPos(pos); 
+		p.setState(state);
+		p.setDel(del); 
+		p.setNat(nat);
+		p.setPassword(password);
+
+		personService.save(p);
+
+		return "/InterFace/PersonFrame/addPerson.jsp";
+	
+	}
+	public  String delectPerson(HttpServletRequest request,
+			HttpServletResponse response) {
+		
+		String id = request.getParameter("id");
+		Person p = new Person();
+		p.setId(Integer.parseInt(id));
+		Integer[] sss = {Integer.parseInt(id)};
+		
+	    try {
+			personService.delete(sss, Person.class, (Integer)request.getSession().getAttribute("userid"));
+		} catch (DaoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+		return "/InterFacce/PersonFrame/updatePerson.jsp";
+	}
+	public  String updatePerson(HttpServletRequest request,
+			HttpServletResponse response) throws DaoException, ServiceBusinessException {	
+			String id = request.getParameter("id");
+			String username = request.getParameter("username");
+			String password =request.getParameter("password");
+			String sex = request.getParameter("sex");
+			String tel = request.getParameter("tel");
+			String realname = request.getParameter("realname");
+			String nat = request.getParameter("nat");
+			String borndate = request.getParameter("borndate");
+			String hiredate = request.getParameter("hiredate");
+			String deptid = request.getParameter("deptid");
+			String cardid =request.getParameter("cardid");
+			String address = request.getParameter("address");
+			String natpl = request.getParameter("natpl");
+			String mail = request.getParameter("mail");
+			String pos = request.getParameter("pos");
+			String state = request.getParameter("state");
+			String del = request.getParameter("del");
+			String createId =request.getParameter("createId");
+			String createtime =request.getParameter("createtime");
+			String updateId = request.getParameter("updateId");
+			String updatetime = request.getParameter("updatetime");
+			String version = request.getParameter("version");
+			String updateid = (String) request.getSession().getAttribute("userid");
+			Map<String, String> map=new HashMap<String, String>();
+			map.put("nat", nat);
+			map.put("username", username);
+			map.put("password", password);
+			map.put("tel", tel);
+			map.put("realname", realname);
+			map.put("borndate", borndate);
+			map.put("hiredate",hiredate );
+			map.put("deptid", deptid);
+			map.put("cardid", cardid);
+			map.put("address", address);
+			map.put("natpl", natpl);
+			map.put("mail", mail);
+			map.put("pos", pos);
+			map.put("state", state);
+			map.put("del", del);
+			map.put("sex",sex);
+			
+			personService.update(map, updateId, Person.class, version, createtime);
+		return "/InterFace/PersonFrame/updatePerson.jsp";
+	}
+		public  String selectPerson(HttpServletRequest request,
+				HttpServletResponse response) throws NumberFormatException, DaoException {
+			String id = request.getParameter("id");
+			String username = request.getParameter("username");
+			String password = request.getParameter("password");
+			String sex = request.getParameter("sex");
+			String tel = request.getParameter("tel");
+			String realname = request.getParameter("realname");
+			String nat = request.getParameter("nat");
+			String borndate = request.getParameter("borndate");
+			String hiredate = request.getParameter("hiredate");
+			String deptid = request.getParameter("deptid");
+			String cardid = request.getParameter("cardid");
+			String address = request.getParameter("address");
+			String natpl = request.getParameter("natpl");
+			String mail = request.getParameter("mail");
+			String pos = request.getParameter("pos");
+			String state = request.getParameter("state");
+			String del = request.getParameter("del");
+			String createId = request.getParameter("createId");
+			String createtime = request.getParameter("createtime");
+			String updateId = request.getParameter("updateId");
+			String updatetime = request.getParameter("updatetime");
+			String version = request.getParameter("version");
+			//personService.findById(Integer.parseInt(id), Person.class);
+		    //personService.findAll(Person.class);
+		    Map<String, String> map=new HashMap<String, String>();
+			map.put("nat", nat);
+			map.put("username", username);
+			map.put("password", password);
+			map.put("tel", tel);
+			map.put("realname", realname);
+			map.put("borndate", borndate);
+			map.put("hiredate",hiredate );
+			map.put("deptid", deptid);
+			map.put("cardid", cardid);
+			map.put("address", address);
+			map.put("natpl", natpl);
+			map.put("mail", mail);
+			map.put("pos", pos);
+			map.put("state", state);
+			List<Map<String, Object>> plist = null;
+			 plist = personService.findBy(map, Person.class);
+		    //System.out.println(plist.get(0)+"7788"+plist.get(1));
+		    request.setAttribute("personmap", plist);
+			return "/InterFace/PersonFrame/selectPerson.jsp";
+		
+			
+		}
+	}
+
